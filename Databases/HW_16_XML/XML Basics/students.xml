@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type='text/xsl' href='StudentsStylesheet.xsl'?>
+<students>
+	<student id="01">
+	  <name>Gambardella, Matthew</name>
+	  <sex>Male</sex>
+	  <birth_date>1990-10-01</birth_date>
+	  <phone>82431794231870</phone>
+	  <email>schwuler@tussy.de</email>
+	  <course>Second</course>
+	  <specialty>English Literature</specialty>
+	  <faculty_number>14342</faculty_number>
+	  <taken_exams>
+		<exam>
+			<name>1st Centyry English Literature</name>
+			<tutor>Kliment Belchev</tutor>
+			<exam_score>Excellent</exam_score>
+      <endorsement>None</endorsement>
+		</exam>
+		<exam>
+			<name>2nd Centyry English Literature</name>
+			<tutor>Kliment Nedelchev</tutor>
+      <exam_score>Excellent</exam_score>
+      <endorsement>None</endorsement>
+		</exam>
+		<exam>
+			<name>3rd Centyry English Literature</name>
+			<tutor>Kliment Levchev</tutor>
+      <exam_score>Excellent</exam_score>
+      <endorsement>None</endorsement>
+		</exam>
+	  </taken_exams>
+    <enrolment>
+      <enrolment_date>2010-01-01</enrolment_date>
+      <acception_exam_score></acception_exam_score>
+    </enrolment>
+	</student>
+
+	<student id="02">
+	  <name>Gambardella, Sonya</name>
+	  <sex>Female</sex>
+	  <birth_date>1991-11-11</birth_date>
+	  <phone>342798347887</phone>
+	  <email>arsh@tussy.de</email>
+	  <course>First</course>
+	  <specialty>Applied Mathematics</specialty>
+	  <faculty_number>76576</faculty_number>
+	  <taken_exams>
+		<exam>
+			<name>Calculus I</name>
+			<tutor>Tashko Belchev</tutor>
+      <exam_score>Excellent</exam_score>
+      <endorsement>None</endorsement>
+		</exam>
+		<exam>
+			<name>Calculus II</name>
+			<tutor>Tashko Nedelchev</tutor>
+      <exam_score>Excellent</exam_score>
+      <endorsement>None</endorsement>
+		</exam>
+	  </taken_exams>
+    <enrolment>
+      <enrolment_date>2011-01-01</enrolment_date>
+      <acception_exam_score></acception_exam_score>
+    </enrolment>
+	</student>
+
+	<student>
+	  <name>Kostova, Penka</name>
+	  <sex>Female</sex>
+	  <birth_date>1989-10-01</birth_date>
+	  <phone>4273427932</phone>
+	  <email>bruederlein@tussy.de</email>
+	  <course>Third</course>
+	  <specialty>English Literature</specialty>
+	  <faculty_number>43234</faculty_number>
+	  <taken_exams>
+		<exam>
+			<name>1st Centyry English Literature</name>
+			<tutor>Kliment Belchev</tutor>
+      <exam_score>Average</exam_score>
+      <endorsement>None</endorsement>
+		</exam>
+		<exam>
+			<name>2nd Centyry English Literature</name>
+			<tutor>Kliment Nedelchev</tutor>
+      <exam_score>Very Good</exam_score>
+      <endorsement>None</endorsement>
+		</exam>
+		<exam>
+			<name>3rd Centyry English Literature</name>
+			<tutor>Kliment Levchev</tutor>
+      <exam_score>Excellent</exam_score>
+      <endorsement>None</endorsement>
+		</exam>
+	  </taken_exams>
+    <enrolment>
+      <enrolment_date>2009-01-01</enrolment_date>
+      <acception_exam_score></acception_exam_score>
+    </enrolment>
+	</student>
+</students>

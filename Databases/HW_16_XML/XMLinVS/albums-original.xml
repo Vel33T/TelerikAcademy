@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<albums name="My catalogue">
+  <album>
+    <name>XML Developer's Guide</name>
+    <artist>Svetlin Nakov</artist>
+    <year>2013</year>
+    <producer>Teleric Corp.</producer>
+    <price>20.00</price>
+    <songs>
+      <track>
+        <title>Loving The Parser</title>
+        <duration>2:13</duration>
+      </track>
+      <track>
+        <title>Markup Me!</title>
+        <duration>3:31</duration>
+      </track>
+      <track>
+        <title>Vegetating On The Screen Light</title>
+        <duration>4:33</duration>
+      </track>
+      <track>
+        <title>Marry The Laptop</title>
+        <duration>2:54</duration>
+      </track>
+    </songs>
+  </album>
+  <album>
+    <name>C# Fundamentals</name>
+    <artist>Svetlin Nakov</artist>
+    <year>2013</year>
+    <producer>Teleric Corp.</producer>
+    <price>20.00</price>
+    <songs>
+      <track>
+        <title>The Loops</title>
+        <duration>2:13</duration>
+      </track>
+      <track>
+        <title>Data Structures</title>
+        <duration>3:31</duration>
+      </track>
+      <track>
+        <title>Algorithms</title>
+        <duration>4:33</duration>
+      </track>
+      <track>
+        <title>Quality Programming Code</title>
+        <duration>2:54</duration>
+      </track>
+      <track>
+        <title>Further Reading</title>
+        <duration>102:54</duration>
+      </track>
+    </songs>
+  </album>
+  <album>
+    <name>Californication</name>
+    <artist>Red Hot Chili Peppers</artist>
+    <year>1999</year>
+    <producer>Ray Bradbury</producer>
+    <price>30.99</price>
+    <songs>
+      <track>
+        <title>Around The World</title>
+        <duration>2:13</duration>
+      </track>
+      <track>
+        <title>Californication</title>
+        <duration>3:31</duration>
+      </track>
+      <track>
+        <title>Otherside</title>
+        <duration>4:33</duration>
+      </track>
+      <track>
+        <title>Emit Remus</title>
+        <duration>2:54</duration>
+      </track>
+      <track>
+        <title>This Velvet Glove</title>
+        <duration>102:54</duration>
+      </track>
+    </songs>
+  </album>
+</albums>
