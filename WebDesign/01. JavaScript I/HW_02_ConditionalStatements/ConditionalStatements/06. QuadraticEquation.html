@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Solving of quadratic equation</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	<style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;		   
+			margin-bottom:5px;
+		}
+
+		a{
+			color:black;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}
+
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-a">Enter a: </label>
+	<input type="text" id="tb-a"/>
+	<br />
+    <label for="tb-b">Enter b: </label>
+	<input type="text" id="tb-b"/>
+	<br />
+    <label for="tb-c">Enter c: </label>
+	<input type="text" id="tb-c"/>
+	<br />
+	<a href="#" onclick="onClick()">Solve the equation!</a>
+	<div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>	  
+	<script>
+	    function onClick() {
+	        var a = jsConsole.readFloat("#tb-a");
+	        var b = jsConsole.readFloat("#tb-b");
+	        var c = jsConsole.readFloat("#tb-c");
+
+	        var d = (b * b) - (4 * a * c);
+
+	        if (d > 0)
+	        {
+	            var rootOne = (-b + Math.sqrt(d)) / 2;
+	            var rootTwo = (-b - Math.sqrt(d)) / 2;
+	            jsConsole.writeLine("There are two real roots.");
+	            jsConsole.writeLine("First root is: " + rootOne);
+	            jsConsole.writeLine("Second root is: " + rootTwo);
+	        }
+	        else if (d == 0)
+	        {
+	            var rootOne = -(b / (2 * a));
+	            jsConsole.writeLine("There is one real root: " + rootOne);
+	        }
+	        else {
+	            jsConsole.writeLine("There are no real roots.");
+	        }
+	    }
+	</script>			  
+</body>
+</html>

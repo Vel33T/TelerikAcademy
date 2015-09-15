@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Substring</title>
+    <link href="styles/input.css" rel="stylesheet" />
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-string">String: </label>
+	<input type="text" id="tb-string"/>
+	<br />
+	<a href="#" onclick="onClick()">Search</a>
+	<div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onClick() {
+            var text = "We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.";
+            var searchedSubstr = jsConsole.read("#tb-string");
+
+            var regEx = new RegExp(searchedSubstr, "gi");
+
+            var matches = text.match(regEx).length;
+
+            jsConsole.writeLine(searchedSubstr + " substring is occuring in the text " + matches + " times!");
+        }
+    </script>
+</body>
+</html>

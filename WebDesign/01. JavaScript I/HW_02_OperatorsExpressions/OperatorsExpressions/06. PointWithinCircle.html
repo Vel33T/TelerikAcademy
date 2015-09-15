@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Check if the point is inside a circle</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	<style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;		   
+			margin-bottom:5px;
+		}
+
+		a{
+			color:black;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}
+
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-x">X coordinate: </label>
+	<input type="text" id="tb-x"/>
+	<br />
+    <label for="tb-y">Y coordinate: </label>
+	<input type="text" id="tb-y"/>
+	<br />
+	<a href="#" onclick="onClick()">Check</a>
+	<div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>  
+	<script>
+	    function onClick() {
+	        var x = jsConsole.readFloat("#tb-x");
+	        var y = jsConsole.readFloat("#tb-y");
+	        var inCircle = (x * x + y * y) <= 25;
+            // Accepting that if the point is on the boundary it is counted as outside.
+	        if (inCircle) {
+	            jsConsole.writeLine("The point is withing the circle!");
+	        }
+	        else {
+	            jsConsole.writeLine("The point is outside the circle!")
+	        }
+	    }
+	</script>			  
+</body>
+</html>

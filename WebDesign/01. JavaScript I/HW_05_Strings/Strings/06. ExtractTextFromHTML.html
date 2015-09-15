@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Extract content from html page</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var text = "<html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>";
+        var result = "";
+        var write = true;
+
+        for (var i = 0; i < text.length; i++) {
+            if (text[i] == "<") {
+                write = false;
+            }
+            else if (write == true) { //I can use only write, not write == true, but did that to be more readable.
+                result += text[i];
+            }
+            else if (text[i] == ">" && write == false) { //Same as top, I wanted to use !write.
+                write = true;
+            }
+        }
+
+        jsConsole.writeLine(result);
+    </script>
+</body>
+</html>

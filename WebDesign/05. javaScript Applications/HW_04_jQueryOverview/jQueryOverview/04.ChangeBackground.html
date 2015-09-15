@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p>Please select background color: </p>
+    <input id="colorChanger" type="color" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+        $('#colorChanger').on('input', function () {
+            var color = $(this).val();
+            $('body').css('background-color', color);
+        });
+    </script>
+</body>
+</html>

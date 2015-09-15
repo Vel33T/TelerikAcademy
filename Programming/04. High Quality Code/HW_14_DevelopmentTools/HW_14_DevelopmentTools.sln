@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Templates", "T4Templates\T4Templates.csproj", "{DA41D761-9367-4BD3-BA79-902A5EBA892F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamTests", "ExamTests\ExamTests.csproj", "{C61DE89C-D830-4DFF-B45A-E718B20D86ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA41D761-9367-4BD3-BA79-902A5EBA892F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA41D761-9367-4BD3-BA79-902A5EBA892F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA41D761-9367-4BD3-BA79-902A5EBA892F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA41D761-9367-4BD3-BA79-902A5EBA892F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C61DE89C-D830-4DFF-B45A-E718B20D86ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C61DE89C-D830-4DFF-B45A-E718B20D86ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C61DE89C-D830-4DFF-B45A-E718B20D86ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C61DE89C-D830-4DFF-B45A-E718B20D86ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

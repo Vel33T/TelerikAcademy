@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Finding the longest increasing sequence</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/input.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>	  
+	<script>
+	    var arr = [3, 2, 3, 4, 2, 2, 4];
+	    var bestStart = 0;
+	    var length = 1;
+	    var bestLength = 0;
+
+	    for (var i = 0; i < arr.length - 1; i++) {
+	        if (arr[i] < arr[i + 1]) {
+	            length++;
+	            if (length > bestLength) {
+	                bestLength = length;
+	                bestStart = i - (length - 2);
+	            }
+	        }
+	        else {
+	            length = 1;
+	        }
+	    }
+
+	    for (var i = 0; i < bestLength; i++) {
+	        jsConsole.write(arr[bestStart + i] + " ");
+	    }
+	</script>	
+</body>
+</html>

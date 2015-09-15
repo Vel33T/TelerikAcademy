@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="local-storage-extensions.js" type="text/javascript"></script>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid;
+        }
+
+        tr:first-child {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+    </div>
+    <br />
+    <div id="wrapper1">
+    </div>
+    <script>
+        var controls = (function () {
+
+            function attachEventHandler(element, eventType, eventHandler) {
+                if (!element) {
+                    return;
+                }
+
+                if (document.addEventListener) {
+                    element.addEventListener(eventType, eventHandler, false);
+                }
+                else if (document.attachEvent) {
+                    element.attachEvent("on" + eventType, eventHandler);
+                }
+                else {
+                    element['on' + eventType] = eventHandler;
+                }
+            }
+
+            function hidePrev(rowParent) {
+                var prevSib = rowParent.previousElementSibling;
+                while (prevSib) {
+                    if (prevSib.getElementsByTagName("table")[0]) {
+                        prevSib.getElementsByTagName("table")[0].style.display = "none";
+                    }
+                    prevSib = prevSib.previousElementSibling;
+                }
+            }
+
+            function hideNext(rowParent) {
+                var nextSib = rowParent.nextElementSibling;
+                while (nextSib) {
+                    if (nextSib.getElementsByTagName("table")[0]) {
+                        nextSib.getElementsByTagName("table")[0].style.display = "none";
+                    }
+                    nextSib = nextSib.nextElementSibling;
+                }
+            }
+
+            function GriedView(selector) {
+
+                var primeElement = document.querySelector(selector);
+                var items = [];
+
+                attachEventHandler(primeElement, "click", function (ev) {
+                    if (!ev) {
+                        ev = window.event;
+                    }
+                    ev.stopPropagation();
+                    ev.preventDefault();
+
+                    var rowParent = ev.target.parentNode;
+
+                    hidePrev(rowParent);
+                    hideNext(rowParent);                    
+
+                    if (rowParent) {
+                        var lastChild = rowParent.lastElementChild;
+                        if (lastChild instanceof HTMLTableElement) {
+                            if (lastChild.style.display == "none") {
+                                lastChild.style.display = "block";
+                            }
+                            else {
+                                lastChild.style.display = "none";
+                            }
+                        }
+                    }
+                });               
+
+                this.addRow = function () {
+                    var newItem = new Item(arguments);
+                    items.push(newItem);
+                    return newItem;
+                };
+
+                this.addHeader = function () {
+                    var newItem = new Item(arguments);
+                    items.shift();
+                    items.unshift(newItem);
+                    return newItem;
+                };
+
+                this.render = function () {
+                    while (primeElement.firstChild) {
+                        primeElement.removeChild(primeElement.firstChild);
+                    }
+
+                    var table = document.createElement("table");
+                    for (var i = 0; i < items.length; i++) {
+                        var item = items[i].render();
+                        table.appendChild(item);
+                    }
+                    primeElement.appendChild(table);
+
+                    return this;
+                };
+
+                this.getGridViewData = function () {
+                    var data = [];
+                    for (var i = 0; i < items.length; i++) {
+                        data.push(items[i].getRowData());
+                    }
+
+                    return data;
+                };
+            }
+
+            function Item(params) {
+                var items = [];
+                var titleArguments = arguments[0];
+
+                this.addRow = function () {
+                    var newItem = new Item(arguments);
+                    items.push(newItem);
+                    return newItem;
+                };
+
+                this.addHeader = function () {
+                    var newItem = new Item(arguments);
+                    items.shift();
+                    items.unshift(newItem);
+                    return newItem;
+                };
+
+                this.render = function () {
+                    var row = document.createElement("tr");                    
+
+                    for (var i = 0; i < titleArguments.length; i++) {
+                        var td = document.createElement("td");
+                        td.innerHTML = titleArguments[i];
+                        row.appendChild(td);
+                    }
+
+                    if (items.length > 0) {
+                        var subTable = document.createElement("table");
+                        subTable.style.display = "none";
+
+                        for (var i = 0; i < items.length; i++) {
+                            var subItem = items[i].render();
+                            subTable.appendChild(subItem);
+                        }
+                        row.appendChild(subTable);
+                    }
+
+                    return row;
+                };
+
+                this.getRowData = function () {
+                    var item = {
+                        rowData: titleArguments
+                    };
+
+                    if (items.length > 0) {
+                        var dataSubItems = [];
+                        for (var i = 0; i < items.length; i++) {
+                            dataSubItems.push(items[i].getRowData());
+                        }
+
+                        item.subItems = dataSubItems;
+                    }
+
+                    return item;
+                };
+            }
+
+            function addItem(copySchool, dataI) {
+                var arr = [];
+                for (var item in dataI.rowData) {
+                    arr.push(dataI.rowData[item]);
+                }
+
+                switch (arr.length) {
+                    case 1:
+                        var accItem = copySchool.addRow(arr[0]);
+                        break;
+                    case 2:
+                        var accItem = copySchool.addRow(arr[0], arr[1]);
+                        break;
+                    case 3:
+                        var accItem = copySchool.addRow(arr[0], arr[1], arr[2]);
+                        break;
+                    case 4:
+                        var accItem = copySchool.addRow(arr[0], arr[1], arr[2], arr[3]);
+                        break;
+                    case 5:
+                        var accItem = copySchool.addRow(arr[0], arr[1], arr[2], arr[3],arr[4]);
+                        break;
+                    case 6:
+                        var accItem = copySchool.addRow(arr[0], arr[1], arr[2], arr[3], arr[4],arr[5]);
+                        break;
+                    case 7:
+                        var accItem = copySchool.addRow(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5],arr[6]);
+                        break;
+                    case 8:
+                        var accItem = copySchool.addRow(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6],arr[7]);
+                        break;
+                    case 9:
+                        var accItem = copySchool.addRow(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7],arr[8]);
+                        break;
+                    case 10:
+                        var accItem = copySchool.addRow(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7],arr[9],arr[10]);
+                        break;
+                    default:
+                }
+
+                if (dataI.subItems) {
+                    for (var i = 0; i < dataI.subItems.length; i++) {
+                        addItem(accItem, dataI.subItems[i]);
+                    }
+                }
+            }
+
+            return {
+                getGridView: function (selector) {
+                    return new GriedView(selector);
+                },
+
+                buildGridView: function (selector, data) {
+                    var copySchool = this.getGridView(selector);
+
+                    if (data) {
+                        for (var i = 0; i < data.length; i++) {
+                            addItem(copySchool, data[i]);
+                        }
+                    }
+
+                    return copySchool;
+                }
+            }
+        })();
+
+        //Task 1,2,3
+        var schoolGrid = controls.getGridView("#wrapper");
+
+        schoolGrid.addHeader("Name", "Location", "Total Students", "Specialty");
+        schoolGrid.addRow("PMG", "Burgas", "400", "Math");
+
+        var school1 = schoolGrid.addRow("Tues", "Sofia", "500", "IT");
+        school1.addHeader("Title", "Start date", "Total students");
+        school1.addRow("JS2", "11 april", "400");        
+        school1.addRow("SEO", "15 april", "1300");
+        school1.addRow("Slice and Dice", "18 april", "500");        
+
+        var school2 = schoolGrid.addRow("Telerik Academy", "Sofia", "5000", "IT");
+        school2.addHeader("Title", "Start date", "Total students");
+        school2.addRow("JS2", "11 april", "400");
+
+        var courseSEO = school2.addRow("SEO", "15 april", "1300");
+        courseSEO.addHeader("First name", "Last Name", "Grade", "Mark");
+        courseSEO.addRow("Mimi", "Petrova", "7grade", "Excelent-6");
+        courseSEO.addRow("Pesho", "Ivanov", "7grade", "Excelent-6");
+
+        school2.addRow("Slice and Dice", "18 april", "500");
+
+        schoolGrid.render();
+
+        //Task 4,5,6
+
+        var schoolsData = schoolGrid.getGridViewData();
+        localStorage.setObject("schools", schoolsData);
+
+        var data = localStorage.getObject("schools");
+        var copySchoolData = controls.buildGridView("#wrapper1", data);
+        copySchoolData.render();
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01_SqrtExceptions", "Task01_SqrtExceptions\Task01_SqrtExceptions.csproj", "{2770346C-5450-4B13-8C62-9E7FAA9BF0F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02_ReadNumberMethod", "Task02_ReadNumberMethod\Task02_ReadNumberMethod.csproj", "{62B1B93D-7D7A-4E47-B12A-3D22C2F1EDFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task03_ReadTextFile", "Task03_ReadTextFile\Task03_ReadTextFile.csproj", "{1F68A21F-3935-4A99-B5CE-EEE020AB220E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task04_DownloadingFile", "Task04_DownloadingFile\Task04_DownloadingFile.csproj", "{2402415C-1E98-4CAC-8EB0-91E958C21928}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2770346C-5450-4B13-8C62-9E7FAA9BF0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2770346C-5450-4B13-8C62-9E7FAA9BF0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2770346C-5450-4B13-8C62-9E7FAA9BF0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2770346C-5450-4B13-8C62-9E7FAA9BF0F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B1B93D-7D7A-4E47-B12A-3D22C2F1EDFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B1B93D-7D7A-4E47-B12A-3D22C2F1EDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B1B93D-7D7A-4E47-B12A-3D22C2F1EDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B1B93D-7D7A-4E47-B12A-3D22C2F1EDFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F68A21F-3935-4A99-B5CE-EEE020AB220E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F68A21F-3935-4A99-B5CE-EEE020AB220E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F68A21F-3935-4A99-B5CE-EEE020AB220E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F68A21F-3935-4A99-B5CE-EEE020AB220E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2402415C-1E98-4CAC-8EB0-91E958C21928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2402415C-1E98-4CAC-8EB0-91E958C21928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2402415C-1E98-4CAC-8EB0-91E958C21928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2402415C-1E98-4CAC-8EB0-91E958C21928}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

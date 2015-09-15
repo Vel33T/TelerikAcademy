@@ -1,0 +1,5 @@
+first bottleneck - Ordering in EventsManager ListEvents Method
+
+second bottleneck - unnessessary loop in Event compareTo
+
+found one more but i'm with no time to check where it was :) 

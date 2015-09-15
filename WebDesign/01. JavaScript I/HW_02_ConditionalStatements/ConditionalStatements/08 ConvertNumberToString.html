@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Converting number to string</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	<style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;		   
+			margin-bottom:5px;
+		}
+
+		a{
+			color:black;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}
+
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-number">Enter number in range[0...999]: </label>
+	<input type="text" id="tb-number"/>
+    <br />
+    <a href="#" onclick="onClick()">Convert!</a>
+	<br />
+    <div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>	  
+	<script>
+	    function onClick() {
+	        var number = jsConsole.readFloat("#tb-number");
+	        var ones = number % 10;
+	        var tens = parseInt((number / 10) % 10);
+	        var hundreds = parseInt(number / 100);
+
+	        switch (hundreds) {
+	            case 0: jsConsole.write(""); break;
+	            case 1:
+	                jsConsole.write("One hundred ");
+	                if (ones != 0 || tens != 0) {
+	                    jsConsole.write("and ");
+	                }
+	                break;
+	            case 2:
+	                jsConsole.write("Two hundred ");
+	                if (ones != 0 || tens != 0) {
+	                    jsConsole.write("and ");
+	                }
+	                break;
+	            case 3:
+	                jsConsole.write("Three hundred ");
+	                if (ones != 0 || tens != 0) {
+	                    jsConsole.write("and ");
+	                }
+	                break;
+	            case 4:
+	                jsConsole.write("Four hundred ");
+	                if (ones != 0 || tens != 0) {
+	                    jsConsole.write("and ");
+	                }
+	                break;
+	            case 5:
+	                jsConsole.write("Five hundred ");
+	                if (ones != 0 || tens != 0) {
+	                    jsConsole.write("and ");
+	                }
+	                break;
+	            case 6:
+	                jsConsole.write("Six hundred ");
+	                if (ones != 0 || tens != 0) {
+	                    jsConsole.write("and ");
+	                }
+	                break;
+	            case 7:
+	                jsConsole.write("Seven hundred ");
+	                if (ones != 0 || tens != 0) {
+	                    jsConsole.write("and ");
+	                }
+	                break;
+	            case 8:
+	                jsConsole.write("Eight hundred ");
+	                if (ones != 0 || tens != 0) {
+	                    jsConsole.write("and ");
+	                }
+	                break;
+	            case 9:
+	                jsConsole.write("Nine hundred ");
+	                if (ones != 0 || tens != 0) {
+	                    jsConsole.write("and ");
+	                }
+	                break;
+	            default: jsConsole.write("Error! Not a valid digit. "); break;
+	        }
+
+	        switch (tens) {
+	            case 0:
+	            case 1: jsConsole.write(""); break;
+	            case 2: jsConsole.write("Twenty "); break;
+	            case 3: jsConsole.write("Thirty "); break;
+	            case 4: jsConsole.write("Fourty "); break;
+	            case 5: jsConsole.write("Fifty "); break;
+	            case 6: jsConsole.write("Sixty "); break;
+	            case 7: jsConsole.write("Seventy "); break;
+	            case 8: jsConsole.write("Eighty "); break;
+	            case 9: jsConsole.write("Ninety "); break;
+	            default: jsConsole.write("Error! Not a valid digit. "); break;
+	        }
+	        if (tens == 1) {
+	            switch (ones) {
+	                case 0: jsConsole.write("Ten"); break;
+	                case 1: jsConsole.write("Eleven"); break;
+	                case 2: jsConsole.write("Twelve"); break;
+	                case 3: jsConsole.write("Thirteen"); break;
+	                case 4: jsConsole.write("Fourteen"); break;
+	                case 5: jsConsole.write("Fifteen"); break;
+	                case 6: jsConsole.write("Sixteen"); break;
+	                case 7: jsConsole.write("Seventeen"); break;
+	                case 8: jsConsole.write("Eighteen"); break;
+	                case 9: jsConsole.write("Nineteen"); break;
+	                default: jsConsole.write("Error! Not a valid digit. "); break;
+	            }
+	        }
+	        else {
+	            switch (ones) {
+	                case 0:
+	                    if (hundreds == 0 && tens == 0) {
+	                    jsConsole.write("Zero");
+	                    }
+	                    break;
+	                case 1: jsConsole.write("One"); break;
+	                case 2: jsConsole.write("Two"); break;
+	                case 3: jsConsole.write("Three"); break;
+	                case 4: jsConsole.write("Four"); break;
+	                case 5: jsConsole.write("Five"); break;
+	                case 6: jsConsole.write("Six"); break;
+	                case 7: jsConsole.write("Seven"); break;
+	                case 8: jsConsole.write("Eight"); break;
+	                case 9: jsConsole.write("Nine"); break;
+	                default: jsConsole.write("Error! Not a valid digit. "); break;
+	            }
+	        }
+	        jsConsole.writeLine("");
+	    }
+	</script>			  
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. PrintCoursesAlphabeticaly", "PrintCoursesAlphabeticaly\01. PrintCoursesAlphabeticaly.csproj", "{20CC4E8A-7A82-4DE9-B623-9A731FE0EE44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. MillionsOfArticles", "MillionsOfArticles\02. MillionsOfArticles.csproj", "{8531CE3F-7BA4-433D-97C7-B3A9255452DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. BiDictionary", "BiDictionary\03. BiDictionary.csproj", "{54D5FD2B-F4EC-4E45-988C-57C0EC372EF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20CC4E8A-7A82-4DE9-B623-9A731FE0EE44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CC4E8A-7A82-4DE9-B623-9A731FE0EE44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CC4E8A-7A82-4DE9-B623-9A731FE0EE44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20CC4E8A-7A82-4DE9-B623-9A731FE0EE44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8531CE3F-7BA4-433D-97C7-B3A9255452DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8531CE3F-7BA4-433D-97C7-B3A9255452DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8531CE3F-7BA4-433D-97C7-B3A9255452DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8531CE3F-7BA4-433D-97C7-B3A9255452DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54D5FD2B-F4EC-4E45-988C-57C0EC372EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54D5FD2B-F4EC-4E45-988C-57C0EC372EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54D5FD2B-F4EC-4E45-988C-57C0EC372EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54D5FD2B-F4EC-4E45-988C-57C0EC372EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

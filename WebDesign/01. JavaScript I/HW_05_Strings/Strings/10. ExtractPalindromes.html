@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Extract all palindromes</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var text = "Petyr ABBA plete. Prez tri lamal preplita. Pleti exe Petre. PletelP.";
+        var words = text.match(/\w+/g);
+
+        for (var i = 0; i < words.length; i++) {
+            for (var y = 0; y < words[i].length / 2; y++) {
+                var palindrome = true;
+
+                // It got messy after that I hope it is not too confusing :(
+                // I miss foreach :)
+                if (words[i][y] != words[i][words[i].length - 1 - y]) {
+                    palindrome = false;
+                    break;
+                }
+            }
+            if (palindrome) {
+                jsConsole.writeLine(words[i]);
+            }
+        }
+    </script>
+</body>
+</html>

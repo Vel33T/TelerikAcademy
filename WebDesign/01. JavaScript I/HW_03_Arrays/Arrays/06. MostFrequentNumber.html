@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Finding most frequently occuring number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/input.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var arr = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3];
+        arr.sort();
+        var bestStart = 0;
+        var length = 1;
+        var bestLength = 0;
+
+        for (var i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == arr[i + 1]) {
+                length++;
+                if (length > bestLength) {
+                    bestLength = length;
+                    bestStart = arr[i];
+                }
+            }
+            else {
+                length = 1;
+            }
+        }
+
+        jsConsole.writeLine(bestStart + "(" + bestLength + " times)");
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. TrashBin", "TrashBucket\01. TrashBin.csproj", "{01A55E45-9F03-4CC0-A17F-57B48FE8F3F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Drawings", "Drawings\04. Drawings.csproj", "{00E20497-4BD4-49A7-AE22-8E66856BF0C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. BallInABox", "BallInABox\05. BallInABox.csproj", "{6DAAAAA9-8E1B-4138-BB41-C401C33C099F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01A55E45-9F03-4CC0-A17F-57B48FE8F3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A55E45-9F03-4CC0-A17F-57B48FE8F3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A55E45-9F03-4CC0-A17F-57B48FE8F3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A55E45-9F03-4CC0-A17F-57B48FE8F3F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E20497-4BD4-49A7-AE22-8E66856BF0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E20497-4BD4-49A7-AE22-8E66856BF0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E20497-4BD4-49A7-AE22-8E66856BF0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E20497-4BD4-49A7-AE22-8E66856BF0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DAAAAA9-8E1B-4138-BB41-C401C33C099F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DAAAAA9-8E1B-4138-BB41-C401C33C099F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DAAAAA9-8E1B-4138-BB41-C401C33C099F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DAAAAA9-8E1B-4138-BB41-C401C33C099F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

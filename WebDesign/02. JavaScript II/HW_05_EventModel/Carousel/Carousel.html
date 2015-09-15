@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Carousel</title>
+    <style>
+        .button {
+            width:50px;
+            height:50px;
+            border-radius:25px;
+            border:5px solid #494949;
+            color:white;
+            background-color: black;
+            font-size:24px;            
+        }
+        #leftButton {
+            position:absolute;
+            left:-30px;
+            top:200px;
+        }
+        #rightButton {
+            position:absolute;
+            left:580px;
+            top:200px;
+        }
+        #imageWrapper {
+            width: 600px;
+            height:450px;
+            background-color:green;
+            position:relative;
+            left:100px;
+            top:50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="imageWrapper">
+            <img id="carouselImage" src="images/peak.jpg" width="600px" height="450px"/>
+            <button id="leftButton" class="button" onclick="onLeftClick()"><</button>
+            <button id="rightButton" class="button" onclick="onRightClick()">></button>
+        </div>
+    </div>
+    <div>
+    </div>    
+	<script>
+	    var images = [
+            "images/beach.jpg",
+            "images/elephant.jpg",
+            "images/peak-and-lake.jpg",
+            "images/puma.jpg",
+            "images/peak.jpg",
+	    ];
+
+	    var imageIndex = 0;
+	    var carouselImage = document.getElementById("carouselImage");
+	    var intervalId = setInterval(function () { onLeftClick() }, 4000);
+
+	    function onLeftClick() {
+	        if (imageIndex === images.length - 1) {
+	            imageIndex = 0;
+	        }
+	        else {
+	            imageIndex++;
+	        }
+	        carouselImage.src = images[imageIndex];
+	        clearInterval(intervalId);
+	        intervalId = setInterval(function () { onLeftClick() }, 4000);
+
+	    }
+	    function onRightClick() {
+	        if (imageIndex === 0) {
+	            imageIndex = images.length - 1;
+	        }
+	        else {
+	            imageIndex--;
+	        }
+	        carouselImage.src = images[imageIndex];
+	        clearInterval(intervalId);
+	        intervalId = setInterval(function () { onRightClick() }, 4000);
+	    }
+	</script>
+</body>
+</html>

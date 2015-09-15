@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SchoolExample.Class" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAACQAAAkAAAAAAAAAAAAAAAAAAIAQAACIAI=</HashCode>
+      <FileName>Class.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SchoolExample.Discipline" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAUAEAAFAAAQAAAAEAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Discipline.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SchoolExample.Person">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAAQEAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SchoolExample.School">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAFAABAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolExample.SchoolTests">
+    <Position X="6.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>SchoolTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolExample.Student">
+    <Position X="1.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SchoolExample.Teacher">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAECAAAAAAAAAAAAEAAAAIAA=</HashCode>
+      <FileName>Teacher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="SchoolExample.ICommentable">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>ICommentable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

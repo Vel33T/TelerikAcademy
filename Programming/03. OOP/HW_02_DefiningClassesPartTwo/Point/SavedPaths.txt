@@ -1,0 +1,4 @@
+3D Point with coordinates: (x=1, y=2, z=3)
+3D Point with coordinates: (x=0, y=0, z=0)
+3D Point with coordinates: (x=3, y=2, z=1)
+3D Point with coordinates: (x=10, y=20, z=15)

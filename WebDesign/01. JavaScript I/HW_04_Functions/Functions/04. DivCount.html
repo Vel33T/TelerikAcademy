@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Counting divs</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body onload="PrintResult(DivCount())"> <!--With this we count all the divs. Not only those before the script.-->
+    <div></div>     <!--1-->
+    <div></div>     <!--2-->
+    <div></div>     <!--3-->
+    <div></div>     <!--4-->
+    <div id="js-console">
+    </div>          <!--5-->
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function DivCount() {
+            return document.getElementsByTagName("div").length;
+        }
+
+        function PrintResult(number) {
+            jsConsole.writeLine('Number of divs: ' + number);
+        }
+    </script>
+    <div></div>     <!--6-->
+    <div></div>     <!--7-->
+    <div></div>     <!--8-->
+    <div></div>     <!--9-->
+</body>
+</html>

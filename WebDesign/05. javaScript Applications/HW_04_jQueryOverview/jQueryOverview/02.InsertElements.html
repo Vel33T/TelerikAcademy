@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        div {
+            text-align: center;
+        }
+
+        .elementToSurround {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            color: white;
+        }
+
+        .prepended {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+        }
+
+        .appended {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="elementToSurround">This element will be surrounded!</div>
+    </div>
+
+    <button id="prependElement">Click to add before elements</button><br />
+    <button id="appendElement">Click to add after elements</button>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery.prototype.appendNewElement = function (elementToAppend) {
+            $(this).after(elementToAppend);
+        }
+
+        jQuery.prototype.prependNewElement = function (elementToPrepend) {
+            $(this).before(elementToPrepend);
+        }
+
+        $('#prependElement').on('click', function () {
+            var elementToPrepend = document.createElement('div');
+            $(elementToPrepend).addClass('prepended').text('prepended before the element');
+
+            $('.elementToSurround').prependNewElement(elementToPrepend);
+        });
+
+        $('#appendElement').on('click', function () {
+            var elementToAppend = document.createElement('div');
+            $(elementToAppend).addClass('appended').text('appended after the element');
+
+            $('.elementToSurround').appendNewElement(elementToAppend);
+        });
+    </script>
+</body>
+</html>

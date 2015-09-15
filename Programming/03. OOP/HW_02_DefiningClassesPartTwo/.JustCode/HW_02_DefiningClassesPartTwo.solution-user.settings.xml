@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="2562207f-6a06-4e4e-a36e-b8e48484ffc9">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>3DPoint/Properties/AssemblyInfo.cs</FileRelativePath>
+        <ProjectRelativePath>3DPoint/Point3D.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>10113840695211819355</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+      <FilePath>
+        <FileRelativePath>VersionAttribute/VersionAttribute.cs</FileRelativePath>
+        <ProjectRelativePath>VersionAttribute/04.%20VersionAttribute.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>13233860863153187501</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+      <FilePath>
+        <FileRelativePath>VersionAttribute/VersionTest.cs</FileRelativePath>
+        <ProjectRelativePath>VersionAttribute/04.%20VersionAttribute.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>6328132325732705729</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>

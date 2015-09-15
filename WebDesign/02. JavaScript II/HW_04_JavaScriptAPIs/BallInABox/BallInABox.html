@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Flying circle in a box</title>
+    <style>
+        body, div, span {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+        }
+
+        #box {
+            width: 450px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        #circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            border: 1px solid blue;
+            display: inline-block;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="circle"></div>
+    </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var directionTop = 1;
+        var directionLeft = 1;
+        var leftPos = 10;
+        var topPos = 130;
+
+        setInterval(function () {
+            topPos += directionTop;
+            leftPos += directionLeft;
+            if (topPos == 290) {
+                directionTop *= -1;
+            }
+            if (leftPos == 440) {
+                directionLeft *= -1;
+            }
+            if (topPos == 10) {
+                directionTop *= -1;
+            }
+            if (leftPos == 10) {
+                directionLeft *= -1;
+            }
+
+            circle.style.left = leftPos + "px";
+            circle.style.top = topPos + "px";
+        }, 5);
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BinaryDocument" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>BinaryDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Document" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAgAAEAAAAAAQAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Document.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DocumentSystem" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAIAAAAAAhAAAAAoAAAgAAAAgBkAEBIA=</HashCode>
+      <FileName>DocumentSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeDocument" Collapsed="true">
+    <Position X="1.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>OfficeDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDFDocument" Collapsed="true">
+    <Position X="3.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAgAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>PDFDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextDocument" Collapsed="true">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAEAAAAA=</HashCode>
+      <FileName>TextDocument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AudioDocument" Collapsed="true">
+    <Position X="7" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>AudioDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MultimediaDocument" Collapsed="true">
+    <Position X="6" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAABAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>MultimediaDocument.cs</FileName>
+      <NewMemberFileName>ExcelDocument.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WordDocument" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgEAAAAAAAAAAAAAAAAAAAAAgAEAAAAA=</HashCode>
+      <FileName>WordDocument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="VideoDocument" Collapsed="true">
+    <Position X="5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAACAAAEAAAAA=</HashCode>
+      <FileName>VideoDocument.cs</FileName>
+      <NewMemberFileName>WordDocument.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EncryptableDocument" Collapsed="true">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EncryptableDocument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ExcelDocument" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <InheritanceLine Type="OfficeDocument" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="4.941" />
+        <Point X="2" Y="5.375" />
+        <Point X="3" Y="5.375" />
+        <Point X="3" Y="5.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgEAAAAAAAIAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>ExcelDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IDocument" Collapsed="true">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAgAAEAAAAAAQAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>DocumentSystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IEditable" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>DocumentSystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IEncryptable" Collapsed="true">
+    <Position X="5.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DocumentSystem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

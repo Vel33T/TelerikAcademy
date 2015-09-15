@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Change text in regions</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var text = "We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don't</mixcase> have <lowcase>ANYthing</lowcase> else.";
+        text = text.replace(/<upcase>(.*?)<\/upcase>/g, toUpper);
+        text = text.replace(/<lowcase>(.*?)<\/lowcase>/g, toLower);
+        text = text.replace(/<mixcase>(.*?)<\/mixcase>/g, toMixed);
+
+        jsConsole.writeLine(text);
+
+        function toUpper(match) {
+            return match.toUpperCase();
+        }
+        function toLower(match) {
+            return match.toLowerCase();
+        }
+        function toMixed(match) {
+            match = match.toString();
+            var result = "";
+            for (var i = 0; i < match.length; i++) {
+                if (i % 2) {
+                    result += match[i].toUpperCase();
+                }
+                else {
+                    result += match[i].toLowerCase();
+                }
+            }
+            return result;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Printing all numbers from 1 to N not divisible by 3,7</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/input.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var arr = [1, 2, 3, 5, 6, 2, 24, 6, 784, 4, 543, 21, -5];
+        var min = arr[0];
+        var max = arr[0]
+        for (var i = 0; i <= arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        jsConsole.writeLine("Min: " + min);
+        jsConsole.writeLine("Max: " + max);
+    </script>
+</body>
+</html>

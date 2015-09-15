@@ -1,0 +1,11 @@
+First bug - in the ToString method of Event the format string was like that 
+string format = "{0:yyyy-MM-ddTH:mm:ss} | {1} - this causes problems when we try to print 00 hour
+string format = "{0:yyyy-MM-ddTHH:mm:ss} | {1} - this is the correct form
+
+second bug - When we try to DeleteEvents and there are none the output was:
+"No events found."
+"No events found" - currect
+
+third bug - EventManagerFast's ListEvents method has a problem with upper and lower case titles
+	because the method AddEvent adds them to lower case. Couldn't fix that bug. That's why I left EventManager
+	instead of EventManagerFast in the Main Method :)

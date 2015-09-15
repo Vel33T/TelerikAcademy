@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var array = [2, 2, 34, 3, 3, 3, 4, 5, 6, 7, 8, 9, 9];
+
+        jsConsole.writeLine("The index bigger then its neighbours is: " + FirstIndexBiggerThenNeighbours());
+
+        function FirstIndexBiggerThenNeighbours() {
+            for (var i = 0; i < array.length; i++) {
+                if (BiggerThenNeightbours(i)) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        function BiggerThenNeightbours(index) {
+            if (index >= array.length || index < 0) {
+                throw new RangeException();
+            }
+            else if (index == array.length - 1) {
+                if (array[index] > array[index - 1]) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            else if (index == 0) {
+                if (array[index] > array[index + 1]) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                if (array[index] > array[index + 1] && array[index] > array[index - 1]) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

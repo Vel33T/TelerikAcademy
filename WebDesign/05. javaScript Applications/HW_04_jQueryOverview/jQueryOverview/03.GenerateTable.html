@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        table {
+            border: 1px solid grey;
+            margin: 0;
+            padding: 0;
+        }
+
+        th {
+            border: 1px solid grey;
+            padding: 10px;
+            margin: 0;
+        }
+
+        td {
+            border: 1px solid grey;
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="table-container"></div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+        var Student = function (firstName, lastName, grade) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.grade = grade;
+        }
+
+        var student1 = new Student("Vel", "Tristanata", 9001);
+        var student2 = new Student("Sasho", "Pro Leona", 13);
+        var student3 = new Student("Mario", "Garena", 47);
+        var students = [];
+        students.push(student1);
+        students.push(student2);
+        students.push(student3);
+
+        var generateTable = function (tableContainer, students) {
+            var tableContainer = $(tableContainer);
+            tableContainer.append('<table><thead><th>First Name</th> ' +
+                '<th>Last Name</th><th>Grade</th></thead><tbody></tbody></table>');
+            var tableBody = tableContainer.children('table').children('tbody');
+
+            for (var i = 0; i < students.length; i++) {
+                tableBody.append('<tr><td>' + students[i].firstName +
+                    '</td><td>' + students[i].lastName +
+                    '</td><td>' + students[i].grade + '</td></tr>');
+            }
+        }
+
+        generateTable('#table-container', students);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Finding youngest person in an array</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var persons = [
+            { firstname: "Gosho", lastname: "Petrov", age: 32 },
+            { firstname: "Bay", lastname: "Ivan", age: 81 },
+            { firstname: "Pesho", lastname: "Kompiro", age: 21 }
+        ];
+
+        var youngestPerson = findYoungest(persons);
+        jsConsole.writeLine(youngestPerson.firstname + " " + youngestPerson.lastname + " -> Age: " + youngestPerson.age);
+
+        function findYoungest(array) {
+            var minAge = 130;
+            var youngestAtPosition = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i].age < minAge) {
+                    minAge = array[i].age;
+                    youngestAtPosition = i;
+                }
+            }
+            return array[youngestAtPosition];
+        }
+    </script>
+</body>
+</html>

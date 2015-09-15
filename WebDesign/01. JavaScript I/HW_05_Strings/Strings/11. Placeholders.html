@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Placeholders</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var format = "{0}, {1}, {0} text {2}";
+        var str = stringFormat(format, 1, "Pesho", "Gosho")
+
+        jsConsole.writeLine(str);
+
+        function stringFormat(format) {
+            var text = "";
+            var inHolder = false;
+            var number = "";
+            for (var i = 0; i < format.length; i++) {
+                if (format[i] == "{") {
+                    inHolder = true;
+                }
+                if (inHolder) {
+                    if (format[i] != "{" && format[i] != "}") {
+                        number += format[i];
+                    }
+                } else {
+                    text += format[i];
+                }
+                if (format[i] == "}") {
+                    inHolder = false;
+                    text += arguments[parseInt(number) + 1];
+                    number = "";
+                }
+            }
+            return text;
+        }
+    </script>
+</body>
+</html>

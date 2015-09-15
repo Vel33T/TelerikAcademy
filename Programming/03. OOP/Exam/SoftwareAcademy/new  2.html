@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Menu bar</title>
+    <style>
+        body button {
+            padding: 0px;
+            margin: 0 -6px;
+            border: none;
+            cursor: pointer;
+        }
+ 
+            body button span {
+                color: #a7162e;
+            }
+ 
+        body .leftend {
+            display: inline-block;
+            background: url(images/leftend.png) no-repeat;
+            width: 16px;
+            height: 55px;
+        }
+ 
+        body .inner {
+            display: inline-block;
+            background: url(images/inner.png) no-repeat;
+            width: 16px;
+            height: 55px;
+        }
+ 
+        body button .middlebar {
+            font-size: 20px;
+            line-height: 55px;
+            background: url(images/middlebar.png) repeat-x;
+            float: left;
+            padding: 0px 10px;
+        }
+ 
+        body .rightend {
+            display: inline-block;
+            background: url(images/rightend.png) no-repeat;
+            width: 16px;
+            height: 55px;
+        }
+    </style>
+</head>
+<body>
+    <span class="leftend"></span>
+    <button>
+        <span class="middlebar">Home</span>
+    </button>
+    <span class="inner"></span>
+    <button>
+        <span class="middlebar">About</span>
+    </button>
+    <span class="inner"></span>
+    <button>
+        <span class="middlebar">More Information</span>
+    </button>
+    <span class="inner"></span>
+    <button>
+        <span class="middlebar">Contacts</span>
+    </button>
+    <span class="rightend"></span>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Lexicographical compare  of two char arrays</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/input.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>	  
+	<script>
+	    var first = ["s", "a", "w", "x", "s", "e"];
+	    var second = ["s", "a", "w", "x", "s", "e"];
+	    var equal = true;
+	    for (var i = 0; i <= first.length; i++) {
+	        if (first[i] != second[i]) {
+	            if (first[i] > second[i]) {
+	                jsConsole.writeLine("The first array is lexicographically larger than the second array.");
+	                equal = false;
+	                break;
+	            }
+	            else {
+	                jsConsole.writeLine("The second array is lexicographically larger than the first array.");
+	                equal = false;
+	                break;
+	            }
+	        }
+	    }
+	    if (equal) {
+            jsConsole.writeLine("The arrays are lexicographically equal.")
+	    }
+	</script>	
+</body>
+</html>

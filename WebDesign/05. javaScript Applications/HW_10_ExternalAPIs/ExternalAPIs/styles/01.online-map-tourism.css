@@ -1,0 +1,24 @@
+﻿body, html, #map-canvas {
+    margin: 0;
+    padding: 0;
+    height: 600px;
+    width: 800px;
+}
+
+#previous {
+    margin: 15px 650px 15px 0;
+}
+
+#cities {
+    position: absolute;
+    top: 50px;
+    left: 820px;
+}
+
+    #cities a {
+        cursor: pointer;
+    }
+
+        #cities a:hover {
+            color: green;
+        }

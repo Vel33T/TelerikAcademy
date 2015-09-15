@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Printing all numbers from 1 to N</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/input.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-number">N: </label>
+	<input type="text" id="tb-number"/>
+	<br />
+	<a href="#" onclick="onClick()">Print 1 ... N Range</a>
+	<div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>	  
+	<script>
+	    function onClick() {
+	        var n = jsConsole.readFloat("#tb-number");
+	        for (var i = 0; i <= n; i++) {
+	            jsConsole.writeLine(i);
+	        }
+	    }
+	</script>	
+</body>
+</html>

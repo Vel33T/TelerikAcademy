@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Find biggest of three integers</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	<style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;		   
+			margin-bottom:5px;
+		}
+
+		a{
+			color:black;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}
+
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+	<label for="tb-first">First number: </label>
+	<input type="text" id="tb-first"/>
+	<br />
+    <label for="tb-second">Second number: </label>
+	<input type="text" id="tb-second"/>
+	<br />
+    <label for="tb-third">Third number: </label>
+	<input type="text" id="tb-third"/>
+	<br />
+    <label for="tb-fourth">Fourth number: </label>
+	<input type="text" id="tb-fourth"/>
+	<br />
+    <label for="tb-fifth">Fifth number: </label>
+	<input type="text" id="tb-fifth"/>
+	<br />
+	<a href="#" onclick="onClick()">Find biggest</a>
+	<div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>	  
+	<script>
+	    function onClick() {
+	        var arr = new Array(5);
+	        arr[0] = jsConsole.readFloat("#tb-first");
+	        arr[1] = jsConsole.readFloat("#tb-second");
+	        arr[2] = jsConsole.readFloat("#tb-third");
+	        arr[3] = jsConsole.readFloat("#tb-fourth");
+	        arr[4] = jsConsole.readFloat("#tb-fifth");
+
+	        var biggest = arr[0];
+	        for (var i = 1; i < arr.length; i++) {
+	            if (arr[i] > biggest) {
+	                biggest = arr[i];
+	            }
+	        }
+            jsConsole.writeLine("The biggest is: " + biggest)
+	    }
+	</script>			  
+</body>
+</html>

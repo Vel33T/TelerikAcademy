@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rotating div elements</title>
+    <style>		
+		#wrapper {        
+          width: 500px;
+          height: 500px;			
+          position: relative;
+          top: 100px;
+          left: 0px;
+		}
+  
+		.shiny-div {
+          width: 50px;
+          height: 50px;
+          border-radius: 40px;
+		}
+		#start-stop {        
+          margin-left: 200px;
+		}
+        #btn-start-shiny, #btn-stop-shiny {
+          background-color: #3FA8C6;
+          padding: 5px 10px;
+          border-radius: 10px;
+          text-decoration: none;
+          color: white;
+        }
+	</style>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+	<div id="start-stop">
+		<a href="#" id="btn-start-shiny" onclick="onStartButtonClick(event)">Start</a>
+		<a href="#" id="btn-stop-shiny" onclick="onStopButtonClick(event)">Stop</a>
+	</div>
+	<div id="wrapper">
+		
+	</div>
+	<script>
+	    var wrapper = document.getElementById("wrapper");
+	    var count = 5;
+	    var divs = document.getElementsByClassName("shiny-div");
+	    var timer;
+	    var maxWidth = screen.width - 100;
+	    var maxHeight = screen.height - 300;
+	    var radius = 150;
+	    var angleStep = 5;
+	    var doublePI = 2 * Math.PI;
+	    var currentAngle = 0;
+
+	    makeRotatingDivs(count);
+
+	    function makeRotatingDivs(count) {
+
+	        for (var i = 0; i < count; i++) {
+	            var rotatingDiv = document.createElement("div");
+	            rotatingDiv.classList.add("shiny-div");
+	            makeRotatingDiv(rotatingDiv);
+	            wrapper.appendChild(rotatingDiv);
+	        }
+	    }
+
+	    function makeRotatingDiv(rotatingDiv) {
+	        rotatingDiv.style.position = "absolute";
+
+	        currentAngle += angleStep;
+
+	        var topPos = parseInt(maxHeight / 5);
+	        var x = topPos + Math.cos(currentAngle) * radius;
+	        rotatingDiv.style.top = x + "px";
+
+	        var left = parseInt(maxWidth / 5);
+	        var y = left + Math.sin(currentAngle) * radius;
+	        rotatingDiv.style.left = y + "px";
+
+	        rotatingDiv.style.backgroundColor = "green";
+	    }
+
+	    function onStartButtonClick(e) {
+	        if (!e) e = window.event;
+
+	        timer = setInterval(function () {
+	            for (var i = 0, len = divs.length; i < len; i++) {
+	                makeRotatingDiv(divs[i]);
+	            }
+	        }, 100);
+
+	        if (e.preventDefault) {
+	            e.preventDefault();
+	        }
+	        return false;
+	    }
+
+	    function onStopButtonClick(e) {
+	        if (!e) e = window.event;
+
+	        clearInterval(timer);
+	        document.getElementById("btn-stop-shiny").disabled = true;
+
+	        if (e.preventDefault) {
+	            e.preventDefault();
+	        }
+	        return false;
+	    }
+	</script>
+</body>
+</html>

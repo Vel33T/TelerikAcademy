@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Shapes</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var pointA = new point(0, 0);
+        var pointB = new point(0, 10);
+        var pointC = new point(10, 0);
+
+        var lineA = new line(pointA, pointB);
+        var lineB = new line(pointB, pointC);
+        var lineC = new line(pointC, pointA);
+
+        jsConsole.writeLine("Does the triangle exist? -> " + (canFromTriangle(lineA, lineB, lineC) ? "Yes!" : "No!"));
+
+
+        jsConsole.writeLine
+
+        function point(x, y) {
+            this.x = x;
+            this.y = y;
+            this.getDistance = function (point) {
+                return Math.sqrt((this.x - point.x) * (this.x - point.x) + (this.y - point.y) * (this.y - point.y));
+            }
+        }
+
+        function line(pointA, pointB) {
+            this.start = pointA;
+            this.end = pointB;
+            this.getLength = function () {
+                return pointA.getDistance(pointB);
+            }
+        }
+
+        function canFromTriangle(lineA, lineB, lineC) {
+            var a = lineA.getLength();
+            var b = lineB.getLength();
+            var c = lineC.getLength();
+
+            return a + b > c && b + c > a && c + a > b;
+        }
+    </script>
+</body>
+</html>

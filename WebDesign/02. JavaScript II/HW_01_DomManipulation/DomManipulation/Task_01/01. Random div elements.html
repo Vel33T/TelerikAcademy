@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Random div elements</title>
+    <script>
+        function generateRandomDivs() {
+            var count = document.getElementById("input").value | 0;
+            for (var i = 0; i < count; i++) {
+                var div = document.createElement("div");
+
+                //generating random values
+                var randomWidth = (Math.random() * 80 + 20) | 0;
+                var randomHeight = (Math.random() * 80 + 20) | 0;
+                var randomLeft = (Math.random() * 800) | 0;
+                var randomTop = (Math.random() * 500 + 40) | 0;
+                var randomBorderRadius = (Math.random() * 40) | 0;
+                var randomBorderWidth = (Math.random() * 10) | 0;
+
+                //applying styles
+                div.innerHTML = "<strong>Div</strong>";
+                div.style.textAlign = "center";
+                div.style.position = "absolute";
+                div.style.width = randomWidth + "px";
+                div.style.height = randomHeight + "px";
+                div.style.left = randomLeft + "px";
+                div.style.top = randomTop + "px";
+                div.style.border = randomBorderWidth + "px solid " + randomColor();
+                div.style.borderRadius = randomBorderRadius + "px";
+                div.style.color = randomColor();
+                div.style.backgroundColor = randomColor();
+
+                document.body.appendChild(div);
+            }
+        }
+
+        function randomColor() {
+            var red = (Math.random() * 255) | 0;
+            var green = (Math.random() * 255) | 0;
+            var blue = (Math.random() * 255) | 0;
+
+            return "rgb(" + red + "," + green + "," + blue + ")";
+        }
+    </script>
+</head>
+<body>
+    <label>Number of divs you want to create: </label>
+    <input type="text" id="input" placeholder="Enter a number!" />
+    <input type="button" value="Click here" onclick="generateRandomDivs()" />
+</body>
+</html>

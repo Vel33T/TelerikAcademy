@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Extract all emails</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var text = "Onche@bonche schupeno@pironche.com ri.ba shtuka@mahai.se ot@tu.ka";
+        var emails = text.match(/\w+@\w+\.\w+/g);
+        jsConsole.writeLine(emails.join("<br />"));
+    </script>
+</body>
+</html>

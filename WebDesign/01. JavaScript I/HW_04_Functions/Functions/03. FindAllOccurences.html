@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find Occurences</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>	  
+	<script>
+	    var text = "We are living in an yellow submarine. In the sky there are no clouds. So we are drinking all the day. We will move out of it in 5 days.";
+	    var searchWord = "In";
+	    var caseSensitive = true;
+	    jsConsole.writeLine(CountOccurences(text, searchWord));
+	    jsConsole.writeLine(CountOccurences(text, searchWord, false));
+	    jsConsole.writeLine(CountOccurences(text, searchWord, true));
+
+	    function CountOccurences(text, searchWord) {
+	        var counter = 0;
+	        text = text.toLowerCase();
+	        searchWord = searchWord.toLowerCase();
+	        var strArr = text.split(/\W+/);
+	        for (var i = 0; i < strArr.length; i++) {
+	            if (searchWord === strArr[i]) {
+	                counter++;
+	            }
+	        }
+	        return counter;
+	    }
+
+	    function CountOccurences(text, searchWord, caseSensitive)
+	    {
+	        var counter = 0;
+	        if (!caseSensitive) {
+	            text = text.toLowerCase();
+	            searchWord = searchWord.toLowerCase();
+	        }
+	        var strArr = text.split(/\W+/);
+	        for (var i = 0; i < strArr.length; i++) {
+	            if (searchWord === strArr[i]) {
+	                counter++;
+	            }
+	        }
+	        return counter;
+	    }
+	</script>
+</body>
+</html>

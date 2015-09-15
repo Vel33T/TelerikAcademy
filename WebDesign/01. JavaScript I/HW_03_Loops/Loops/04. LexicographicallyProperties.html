@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Printing all numbers from 1 to N not divisible by 3,7</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/input.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        jsConsole.writeLine("In window");
+        Smallest(window);
+        Largest(window);
+
+        jsConsole.writeLine("In document");
+        Smallest(document);
+        Largest(document);
+
+        jsConsole.writeLine("In navigator");
+        Smallest(navigator);
+        Largest(navigator);
+
+        function Smallest(obj) {
+            var smallest = "z";
+            for (var property in obj) {
+                if (smallest > property) {
+                    smallest = property;
+                }
+            }
+            jsConsole.writeLine("Lexicographically smallest is: " + smallest);
+        }
+
+        function Largest(obj) {
+            var largest = "a";
+            for (var property in obj) {
+                if (largest < property) {
+                    largest = property;
+                }
+            }
+            jsConsole.writeLine("Lexicographically largest is: " + largest);
+        }
+    </script>
+</body>
+</html>

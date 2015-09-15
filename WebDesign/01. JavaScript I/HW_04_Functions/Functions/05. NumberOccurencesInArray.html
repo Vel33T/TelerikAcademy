@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find number occurences in array</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var array = [2, 34, 45, 3, 3, 3, 2, 34, 2, 4, 45, 5, 2];
+        var number = 2;
+
+        jsConsole.writeLine(number + " occur " + Occurences(array, number) + " times in the array.")
+
+        function Occurences(array, number) {
+            var count  = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] === number) {
+                    count++;
+                }
+            }
+            return count;
+        }
+    </script>
+</body>
+</html>

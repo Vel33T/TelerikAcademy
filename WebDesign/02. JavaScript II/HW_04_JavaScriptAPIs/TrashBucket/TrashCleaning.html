@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Clear the trash</title>
+    <style>
+        img {
+            position: absolute;
+        }
+
+        #container {
+            margin-left: 180px;
+        }
+
+        #trash-can {
+            float: left;
+        }
+    </style>
+    <script>
+        var trashCan = document.getElementById('trash-can');
+
+        function changeTrashBinState(state) {
+            var img = document.getElementById("trash-can");
+            img.src = "images/trash-can-" + state + ".jpg";
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("dragged-id", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("dragged-id");
+            var elementToRemove = document.getElementById(data);
+            container.removeChild(elementToRemove);
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper" ondrop="drop(event)" >
+        <img src="images/trash-can-closed.jpg" id="trash-can" ondragover="changeTrashBinState('opened'); allowDrop(event)" ondrop="changeTrashBinState('closed')" />
+        <div id="container">
+            <img src="images/trash.jpg" id="img1" draggable="true" ondragstart="drag(event)" style="margin-left: 64px; margin-top: 354px" />
+            <img src="images/trash.jpg" id="img2" draggable="true" ondragstart="drag(event)" style="margin-left: 320px; margin-top: 265px" />
+            <img src="images/trash.jpg" id="img3" draggable="true" ondragstart="drag(event)" style="margin-left: 200px; margin-top: 300px" />
+            <img src="images/trash.jpg" id="img4" draggable="true" ondragstart="drag(event)" style="margin-left: 309px; margin-top: 107px" />
+            <img src="images/trash.jpg" id="img5" draggable="true" ondragstart="drag(event)" style="margin-left: 307px; margin-top: 306px" />
+            <img src="images/trash.jpg" id="img6" draggable="true" ondragstart="drag(event)" style="margin-left: 306px; margin-top: 206px" />
+        </div>
+    </div>
+</body>
+</html>

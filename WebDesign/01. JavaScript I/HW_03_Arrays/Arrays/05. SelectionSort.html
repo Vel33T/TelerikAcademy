@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Selection sort</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/input.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var arr = [2, 3, -6, -1, 2, -1, 6, 4, -8, 8, 34, -34272, 0];
+        var minNumPossition = 0;
+
+        for (var i = 0; i < arr.length - 1; i++) {
+            minNumPossition = i;
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minNumPossition]) {
+                    minNumPossition = j;
+                }
+            }
+            if (minNumPossition != i) {
+                var temp = arr[i];
+                arr[i] = arr[minNumPossition];
+                arr[minNumPossition] = temp;
+            }
+        }
+
+        for (var i = 0; i < arr.length; i++) {
+            jsConsole.write(arr[i] + " ");
+        }
+    </script>
+</body>
+</html>

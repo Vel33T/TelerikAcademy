@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Adding of array.remove</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        addingRemoveToArray();
+
+        var array = [2, 2, 34, 3, 3, 3, 4, 5, 6, 7, 8, 9, 9];
+        var numberToRemove = 34;
+
+        jsConsole.writeLine(array.join(" "));
+        var result = array.remove(numberToRemove);
+        jsConsole.writeLine(result.join(" "));
+
+        function addingRemoveToArray() {
+            if (!Array.prototype.remove) {
+                Array.prototype.remove = function (value) {
+                    var result = [];
+                    var size = this.length;
+
+                    for (var i = 0; i < size; i++) {
+                        if (this[i] !== value) {
+                            result.push(this[i]);
+                        }
+                    }
+                    return result;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

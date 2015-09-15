@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Tree", "Tree\01. Tree.csproj", "{27F6CE83-6A12-4C18-8924-BB22333AA716}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. TraverseWindowsDirectory", "TraverseWindowsDirectory\02. TraverseWindowsDirectory.csproj", "{B74BBA87-E353-410D-BED0-5CBAD29C8398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. DirectoriesTree", "DirectoriesTree\03. DirectoriesTree.csproj", "{D0676BF0-FD39-4F1E-A043-AD621A67FC93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27F6CE83-6A12-4C18-8924-BB22333AA716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F6CE83-6A12-4C18-8924-BB22333AA716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F6CE83-6A12-4C18-8924-BB22333AA716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F6CE83-6A12-4C18-8924-BB22333AA716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B74BBA87-E353-410D-BED0-5CBAD29C8398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B74BBA87-E353-410D-BED0-5CBAD29C8398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B74BBA87-E353-410D-BED0-5CBAD29C8398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B74BBA87-E353-410D-BED0-5CBAD29C8398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0676BF0-FD39-4F1E-A043-AD621A67FC93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0676BF0-FD39-4F1E-A043-AD621A67FC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0676BF0-FD39-4F1E-A043-AD621A67FC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0676BF0-FD39-4F1E-A043-AD621A67FC93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

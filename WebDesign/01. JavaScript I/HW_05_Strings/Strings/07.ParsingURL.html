@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Parsing URL address</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var address = "https://probanking.procreditbank.bg/pdf/General_Security_Information_.pdf";
+
+        var result = ParsingURLToJSON(address);
+
+        jsConsole.writeLine("Protocol : " + result.Protocol);
+        jsConsole.writeLine("Server : " + result.Server);
+        jsConsole.writeLine("Resourse : " + result.Resourse);
+
+        function ParsingURLToJSON(address) {
+            //Getting protocol
+            var index = address.indexOf(":");
+            var protocol = address.substr(0, index);
+            address = address.replace(address.substr(0, index + 3), "");
+
+            //Getting server
+            index = address.indexOf("/");
+            var server = address.substr(0, index);
+            address = address.replace(address.substr(0, index), "");
+
+            //Getting resourse
+            var resourse = address;
+
+            return {
+                "Protocol" : protocol,
+                "Server" : server,
+                "Resourse" : resourse,
+            };
+        }
+    </script>
+</body>
+</html>

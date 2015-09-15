@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Brackets</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var str = "((a+b)/5-d)";
+        //var str = ")(a+b)(";
+        //var str = "((a+b))/5-d)";
+        var counter = 1;
+        for (var i = 0; i < str.length; i++) {
+            if (str[i] == "(") {
+                counter++;
+            }
+            else if (str[i] == ")") {
+                if (counter == 1) {
+                    counter--;
+                    break;
+                }
+                counter--;
+            }
+        }
+        jsConsole.writeLine(counter ? "Correct expression!" : "Incorrect expression!");
+    </script>
+</body>
+</html>

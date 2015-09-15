@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Maximum sequence of equal numbers</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/input.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+	</div>
+    <script src="scripts/js-console.js"></script>	  
+	<script>
+	    var arr = [2, 1, 1, 2, 3, 3, 2, 2, 2, 1];
+	    var bestStart = 0;
+	    var length = 1;
+	    var bestLength = 0;
+
+	    for (var i = 0; i < arr.length - 1; i++) {
+	        if (arr[i] == arr[i + 1]) {
+	            length++;
+	            if (length > bestLength) {
+	                bestLength = length;
+	                bestStart = arr[i];
+	            }
+	        }
+	        else {
+	            length = 1;
+	        }
+	    }
+
+	    for (var i = 0; i < bestLength; i++) {
+	        jsConsole.write(bestStart + " ");
+	    }
+	</script>	
+</body>
+</html>
